@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme-aware background and text */
+body {
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+.light body {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.dark body {
+  @apply bg-gray-900 text-gray-100;
+}
+:root.light {
+  --card-bg: #ffffff;
+  --border: #e5e5e5;
+}
+
+:root.dark {
+  --card-bg: #1e1e1e;
+  --border: #333;
+}
+.input-box {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+.input-box:focus {
+  border-color: #2563eb;
+}
