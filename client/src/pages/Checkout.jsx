@@ -66,7 +66,7 @@ const Checkout = () => {
   const payWithStripe = async () => {
     const stripe = await stripePromise;
 
-    const response = await fetch("http://localhost:4000/create-checkout-session", {
+    const response = await fetch("https://trendhive-commerce-1.onrender.com/create-checkout-session", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount: total }),

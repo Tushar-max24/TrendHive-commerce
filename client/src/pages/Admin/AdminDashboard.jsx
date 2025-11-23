@@ -52,7 +52,7 @@ const AdminDashboard = () => {
     try {
       setSyncLoading(true);
 
-      const res = await fetch("http://localhost:4000/api/admin/sync-products", {
+      const res = await fetch("https://trendhive-commerce-1.onrender.com/api/admin/sync-products", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });
